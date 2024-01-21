@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Центрирование логотипа по горизонтали */
+    align-items: center;
+    padding: 10px;
+    height: 100px; /* Добавьте высоту, чтобы создать вертикальное выравнивание */
+}
+
+#logo {
+    /* Add your logo dimensions */
+    width: 100px;
+    height: auto;
+}
+
+#image-slider {
+    /* Slider container styles */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center; /* Выравнивание по центру по горизонтали */
+}
+
+#image-slider img {
+    max-width: 100%; /* Изменено с width: 100% на max-width: 100% для более адаптивного поведения */
+    display: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f0f0f0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#learn-more {
+    padding: 20px 40px;
+    background: linear-gradient(to right, #32cd32, #7fff00);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    font-size: 18px; /* Увеличиваем размер текста */
+    font-weight: bold; /* Делаем текст жирным */
+}
+
+#learn-more::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+    transform: skewX(-45deg);
+    transition: left 0.5s ease-in-out;
+}
+
+#learn-more:hover::after {
+    left: 150%;
+}
+
